@@ -1,0 +1,56 @@
+body {
+    display: grid;
+    place-content: center;
+    height: 100hv;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    gap: 6px;
+}
+
+.carta {
+    position: relative;
+    cursor: pointer;
+}
+
+.atras {
+    position: absolute;
+    background-color: cornflowerblue;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;   
+    font-weight: bold;
+    display: grid;
+    place-content: center;
+    transition: all 450ms linear;
+    backface-visibility: hidden;
+}
+
+.frente {
+    transform: rotate3d(270deg);
+    backface-visibility: hidden;
+    transition: all 450ms linear;
+}
+
+.carta-virada .frente {
+    transform: rotateY(0deg);
+}
+
+.carta-virada .atras {
+    transform: rotateY(270deg);
+}
+
+button {
+    border: none;
+    padding: 20px;
+    width: 250px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    justify-self: center;
+    cursor: pointer
+}
